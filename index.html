@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+  <div class="flex min-h-screen flex-col justify-center items-center py-6">
+    <div class="bg-white px-6 pt-5 pb-5 shadow-xl ring-1 ring-gray-900/5 sm:max-w-lg sm:rounded-lg sm:px-10 w-full">
+      <h2 class="text-3xl text-center font-bold leading-tight mb-6">Registration Form</h2>
+      <form id="user-form">
+        <div class="flex items-center mb-4">
+          <label for="name" class="w-40 text-md font-medium text-gray-700">Name</label>
+          <input required type="text" id="name" name="name"
+            class="flex-1 bg-gray-100 rounded-lg shadow-md px-4 py-3 text-base placeholder-gray-500 focus:outline-none"
+            placeholder="Enter full name">
+        </div>
+        <div class="flex items-center mb-4">
+          <label for="email" class="w-40 text-md font-medium text-gray-700">Email</label>
+          <input required type="email" id="email" name="email"
+            class="flex-1 bg-gray-100 rounded-lg shadow-md px-4 py-3 text-base focus:outline-none"
+            placeholder="Enter email">
+        </div>
+        <div class="flex items-center mb-4">
+          <label for="password" class="w-40 text-md font-medium text-gray-700">Password</label>
+          <input required type="password" id="password" name="password"
+            class="flex-1 bg-gray-100 rounded-lg shadow-md px-4 py-3 text-base focus:outline-none"
+            placeholder="Enter password">
+        </div>
+        <div class="flex items-center mb-4">
+          <label for="dob" class="w-40 text-md font-medium text-gray-700">Date of Birth</label>
+          <input required type="date" id="dob" name="dob"
+            class="flex-1 bg-gray-100 rounded-lg shadow-md px-4 py-3 text-base focus:outline-none"
+            placeholder="dd/mm/yyyy">
+        </div>
+        <div class="flex items-center mb-6">
+          <label for="acceptTerms" class="w-40 text-md font-medium text-gray-700">Accept terms</label>
+          <input type="checkbox" id="acceptTerms" name="acceptTerms"
+            class="h-5 w-5 bg-gray-100 rounded shadow-md">
+        </div>
+        <button type="submit"
+          class="w-fit rounded-lg shadow-lg px-8 py-4 bg-green-500 text-white hover:bg-green-400 transition duration-200">
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <div class="bg-white px-6 mt-5 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 w-full max-w-6xl mx-auto rounded">
+      <h2 class="text-3xl text-center font-bold leading-tight mb-4">Entries</h2>
+      <div id="user-entries" class="overflow-x-auto w-full"></div>
+    </div>
+  </div>
+
+
+  <script src="index.js"></script>
+
+</body>
+</html>
